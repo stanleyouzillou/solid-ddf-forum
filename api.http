@@ -1,0 +1,24 @@
+### Create User
+POST http://localhost:3000/users/new
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "username": "johndoe",
+  "firstName": "John",
+  "lastName": "Doe"
+}
+
+### Edit User
+POST http://localhost:3000/users/edit/1
+Content-Type: application/json
+
+{
+  "email": "john.new@example.com",
+  "username": "johnnew",
+  "firstName": "John",
+  "lastName": "New"
+}
+
+### Get User by Email
+GET http://localhost:3000/users?email=john.doe@example.com
