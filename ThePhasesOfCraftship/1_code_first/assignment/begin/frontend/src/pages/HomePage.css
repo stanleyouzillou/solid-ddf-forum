@@ -1,0 +1,36 @@
+/* src/pages/HomePage.css */
+.home-page {
+  padding: 2rem;
+}
+
+.home-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-page ul {
+  padding: 0;
+  list-style: none;
+}
+
+.home-page li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.home-page h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-page p {
+  margin: 0.5rem 0;
+}
+
+.home-page p:last-child {
+  font-size: 0.875rem;
+  color: #666;
+}

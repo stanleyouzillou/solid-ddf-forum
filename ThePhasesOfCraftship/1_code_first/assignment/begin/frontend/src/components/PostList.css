@@ -1,0 +1,36 @@
+/* src/components/PostList.css */
+.post-list {
+  padding: 2rem;
+}
+
+.post-list h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.post-list li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.post-list h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-list p {
+  margin: 0.5rem 0;
+}
+
+.post-list p:last-child {
+  font-size: 0.875rem;
+  color: #666;
+}

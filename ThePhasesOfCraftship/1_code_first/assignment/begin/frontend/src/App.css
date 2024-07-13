@@ -1,0 +1,80 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.home-page {
+  padding: 2rem;
+}
+
+.home-page ul {
+  padding: 0;
+}
+
+.home-page li {
+  margin-bottom: 1rem;
+}
+
+.home-page h3 {
+  margin-bottom: 0.5rem;
+}
+
+.registration-page {
+  padding: 2rem;
+}
+
+.registration-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-page input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.registration-page button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.registration-page button:hover {
+  background-color: #555;
+}
