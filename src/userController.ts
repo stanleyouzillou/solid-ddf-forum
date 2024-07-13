@@ -171,3 +171,20 @@ export const getUserByEmail = async (req: Request, res: Response) => {
     });
   }
 };
+
+export const getAllPosts = async (req: Request, res: Response) => {
+  try {
+    const posts = await prisma.post.findMany({
+      orderBy: { createdAt: "desc" },
+    });
+
+    return res.status(200).json(posts);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      error: ERRORS.SERVER_ERROR,
+      data: undefined,
+      success: false,
+    });
+  }
+};

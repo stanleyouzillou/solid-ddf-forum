@@ -1,9 +1,16 @@
-// src/routes.ts
 import { Router } from "express";
-import { createUser, editUser, getUserByEmail } from "./userController";
+import {
+  createUser,
+  editUser,
+  getUserByEmail,
+  getAllPosts,
+} from "./userController";
 
-export const userRoutes = Router();
+const router = Router();
 
-userRoutes.post("/new", createUser);
-userRoutes.post("/edit/:userId", editUser);
-userRoutes.get("/", getUserByEmail);
+router.post("/new", createUser);
+router.post("/edit/:userId", editUser);
+router.get("/", getUserByEmail);
+router.get("/posts", getAllPosts);
+
+export default router;

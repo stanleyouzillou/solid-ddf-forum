@@ -22,3 +22,6 @@ Content-Type: application/json
 
 ### Get User by Email
 GET http://localhost:3000/users?email=john.doe@example.com
+
+### Get All Posts
+GET http://localhost:3000/posts
