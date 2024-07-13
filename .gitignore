@@ -1,9 +1,76 @@
-node_modules
-package-lock.json
-build
+# Ignore everything by default
+/*
 
-# Exclude everything in the parent directory
-../*
+# Do not ignore the current directory
+!*/
 
-# Allow only the current directory and its subdirectories
-!./
+# Allow necessary files and directories within the current directory
+!**/*
+
+# Ignore specific files and directories that should not be pushed
+node_modules/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore environment variables files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore coverage directory
+coverage/
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Ignore miscellaneous OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore TypeScript build cache
+*.tsbuildinfo
+
+# Ignore Parcel-bundler cache
+.cache/
+.parcel-cache
+
+# Ignore Jest coverage directories
+coverage/
+
+# Ignore next.js build output
+.next/
+
+# Ignore Nuxt.js build output
+.nuxt/
+
+# Ignore Gatsby files
+.cache/
+public/
+
+# Ignore Vuepress build output
+.vuepress/dist/
+
+# Ignore Serverless directories
+.serverless/
+
+# Ignore FuseBox cache
+.fusebox/
+
+# Ignore eslint and stylelint cache
+.eslintcache
+.stylelintcache
