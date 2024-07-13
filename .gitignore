@@ -1,3 +1,9 @@
 node_modules
 package-lock.json
 build
+
+# Exclude everything in the parent directory
+../*
+
+# Allow only the current directory and its subdirectories
+!./
