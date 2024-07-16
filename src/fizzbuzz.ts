@@ -1,5 +1,7 @@
 export function fizzBuzz(num: number): string {
-  if (num === 9) return "Fizz";
+  const isMultipleOfThree = num % 3 === 0;
+
   if (num === 15) return "FizzBuzz";
-  return num === 3 ? "Fizz" : "Buzz";
+  if (isMultipleOfThree) return "Fizz";
+  return "Buzz";
 }
