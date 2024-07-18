@@ -20,4 +20,14 @@ export class Calculator {
   static printLength(numbers: number[]): number {
     return numbers.length;
   }
+  static averageValue(numbers: number[]): number {
+    let sumOfSequence = 0;
+    const sequenceLength = Calculator.printLength(numbers);
+    let average: number;
+    numbers.forEach((num) => {
+      sumOfSequence += num;
+    });
+    average = sumOfSequence / sequenceLength;
+    return average;
+  }
 }
