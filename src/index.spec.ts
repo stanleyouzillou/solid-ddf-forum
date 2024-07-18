@@ -1,7 +1,16 @@
 import { Calculator } from ".";
 
 describe("stats calculator", () => {
-  it("should print -8 as the minimum value for the given sequence of number [2, 4, 21, -8, 53, 40]", () => {
-    expect(Calculator.minimum([2, 4, -21, -8, 53, 40])).toBe(-21);
+  //Arrange
+  let example = [2, 4, 21, -8, 53, 40];
+  // Act
+
+  // Assert
+
+  it("should return -8 as the minimum value for the sequence [2, 4, 21, -8, 53, 40]", () => {
+    expect(Calculator.minimum(example)).toBe(-8);
+  });
+  it("should return 53 as the maximum value for the sequence [2, 4, 21, -8, 53, 40]", () => {
+    expect(Calculator.maximum(example)).toBe(53);
   });
 });
