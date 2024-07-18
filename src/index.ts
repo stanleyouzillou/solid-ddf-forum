@@ -1,33 +1,32 @@
 export class Calculator {
+  static findExtreme(
+    numbers: number[],
+    comparator: (a: number, b: number) => boolean
+  ): number {
+    let extremeNumber = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+      if (comparator(numbers[i], extremeNumber)) {
+        extremeNumber = numbers[i];
+      }
+    }
+    return extremeNumber;
+  }
+
   static minimum(numbers: number[]): number {
-    let minNumber = numbers[0];
-    for (let i = 1; i < numbers.length; i++) {
-      if (numbers[i] < minNumber) {
-        minNumber = numbers[i];
-      }
-    }
-    return minNumber;
+    return this.findExtreme(numbers, (a, b) => a < b);
   }
+
   static maximum(numbers: number[]): number {
-    let maxNumber = numbers[0];
-    for (let i = 1; i < numbers.length; i++) {
-      if (numbers[i] > maxNumber) {
-        maxNumber = numbers[i];
-      }
-    }
-    return maxNumber;
+    return this.findExtreme(numbers, (a, b) => a > b);
   }
+
   static printLength(numbers: number[]): number {
     return numbers.length;
   }
+
   static averageValue(numbers: number[]): number {
-    let sumOfSequence = 0;
-    const sequenceLength = Calculator.printLength(numbers);
-    let average: number;
-    numbers.forEach((num) => {
-      sumOfSequence += num;
-    });
-    average = sumOfSequence / sequenceLength;
-    return average;
+    const sumOfSequence = numbers.reduce((sum, num) => sum + num, 0);
+    const sequenceLength = this.printLength(numbers);
+    return sumOfSequence / sequenceLength;
   }
 }
