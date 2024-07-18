@@ -17,4 +17,7 @@ export class Calculator {
     }
     return maxNumber;
   }
+  static printLength(numbers: number[]): number {
+    return numbers.length;
+  }
 }
