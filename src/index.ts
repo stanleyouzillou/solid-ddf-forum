@@ -14,7 +14,17 @@ export function militaryTimeValidator(timeRange: string): boolean {
     const isValidMinute =
       minuteXM >= 0 && minuteXM <= 59 && minuteYM >= 0 && minuteYM <= 59;
 
-    return isValidHour && isValidMinute;
+    if (!isValidHour || !isValidMinute) {
+      return false;
+    }
+
+    if (hourXH > hourYH) {
+      return false;
+    } else if (hourXH === hourYH) {
+      return minuteXM < minuteYM;
+    }
+
+    return true;
   }
   return false;
 }
