@@ -12,6 +12,10 @@ export function evaluateBooleanExpression(expression: string): boolean {
     const parts = expression.split(" AND ");
     return parts.every((part) => evaluateBooleanExpression(part));
   }
+  if (expression.includes(" OR ")) {
+    const parts = expression.split(" OR ");
+    return parts.some((part) => evaluateBooleanExpression(part));
+  }
 
   throw new Error("Invalid expression");
 }

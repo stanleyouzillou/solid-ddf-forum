@@ -16,4 +16,10 @@ describe("boolean calculator", () => {
   it('should evaluate "TRUE AND TRUE" as true', () => {
     expect(evaluateBooleanExpression("TRUE AND TRUE")).toBe(true);
   });
+  it('should evaluate "TRUE OR FALSE as true', () => {
+    expect(evaluateBooleanExpression("TRUE OR FALSE")).toBe(true);
+  });
+  it('should evaluate "FALSE OR FALSE" as false', () => {
+    expect(evaluateBooleanExpression("FALSE OR FALSE")).toBe(false);
+  });
 });
