@@ -8,11 +8,15 @@ export function evaluateBooleanExpression(expression: string): boolean {
   if (expression.startsWith("NOT ")) {
     return !evaluateBooleanExpression(expression.slice(4));
   }
-  if (expression.includes(" AND ")) {
+
+  const andIndex = expression.indexOf(" AND ");
+  const orIndex = expression.indexOf(" OR ");
+
+  if (andIndex > -1 && (orIndex === -1 || andIndex < orIndex)) {
     const parts = expression.split(" AND ");
     return parts.every((part) => evaluateBooleanExpression(part));
   }
-  if (expression.includes(" OR ")) {
+  if (orIndex > -1) {
     const parts = expression.split(" OR ");
     return parts.some((part) => evaluateBooleanExpression(part));
   }

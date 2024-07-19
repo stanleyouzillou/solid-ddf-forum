@@ -22,4 +22,13 @@ describe("boolean calculator", () => {
   it('should evaluate "FALSE OR FALSE" as false', () => {
     expect(evaluateBooleanExpression("FALSE OR FALSE")).toBe(false);
   });
+  it('should evaluate "TRUE OR TRUE OR TRUE AND FALSE" as true', () => {
+    expect(evaluateBooleanExpression("TRUE OR TRUE OR TRUE AND FALSE")).toBe(
+      true
+    );
+  });
+
+  it('should evaluate "TRUE OR FALSE AND NOT FALSE" as true', () => {
+    expect(evaluateBooleanExpression("TRUE OR FALSE AND NOT FALSE")).toBe(true);
+  });
 });
