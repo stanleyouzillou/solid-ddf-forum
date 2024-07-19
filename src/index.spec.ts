@@ -10,4 +10,10 @@ describe("boolean calculator", () => {
   it('should evaluate "NOT TRUE" as false', () => {
     expect(evaluateBooleanExpression("NOT TRUE")).toBe(false);
   });
+  it('should evaluate "TRUE AND FALSE" as false', () => {
+    expect(evaluateBooleanExpression("TRUE AND FALSE")).toBe(false);
+  });
+  it('should evaluate "TRUE AND TRUE" as true', () => {
+    expect(evaluateBooleanExpression("TRUE AND TRUE")).toBe(true);
+  });
 });
